@@ -1,0 +1,21 @@
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+
+repositories {
+   	mavenCentral()
+}
+
+dependencies {
+	compile 'com.yahoofinance-api:YahooFinanceAPI:3.12.3'
+	
+    testImplementation 'junit:junit:4.12'
+    implementation 'com.google.code.gson:gson:2.8.1'
+    
+    //utils
+	implementation 'org.apache.logging.log4j:log4j-core:2.8.2'
+	implementation 'org.apache.logging.log4j:log4j-api:2.8.2'
+	implementation 'org.apache.logging.log4j:log4j-slf4j-impl:2.8.2'
+}
+
