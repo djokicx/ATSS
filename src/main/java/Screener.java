@@ -86,7 +86,9 @@ public class Screener {
         return mappings;
     }
     
-    public static List<HistoricalObservation> getHistoricalWinners(Stock stock) throws IOException {
+    
+    /* Helper Task */
+    private static List<HistoricalObservation> getHistoricalWinners(Stock stock) throws IOException {
         List<HistoricalObservation> observations = new ArrayList<HistoricalObservation>();
         for (int i = stock.getHistory().size() - 1; i >= 2; i--) {
             List<HistoricalQuote> tempChunk = stock.getHistory().subList(i - 2, i + 1);
